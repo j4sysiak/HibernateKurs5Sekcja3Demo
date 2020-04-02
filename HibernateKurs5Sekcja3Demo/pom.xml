@@ -1,14 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>pl.jaceksysiak</groupId>
-  <artifactId>HibernateKurs5Sekcja3Demo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>HibernateKurs5Sekcja3Demo</name>
-  <description>HibernateKurs5Sekcja3Demo</description>
-  <packaging>war</packaging>
-  
-  
-  	<dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>pl.jaceksysiak</groupId>
+	<artifactId>HibernateKurs5Sekcja3Demo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>HibernateKurs5Sekcja3Demo</name>
+	<description>HibernateKurs5Sekcja3Demo</description>
+	<packaging>war</packaging>
+
+
+	<dependencies>
 		<!-- Hibernate's core ORM functionality -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -23,10 +25,22 @@
 			<version>5.1.48</version>
 		</dependency>
 
-	</dependencies>
-  
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.7</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.7</version>
+		</dependency>
 
-	  	<build>
+	</dependencies>
+
+
+	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
