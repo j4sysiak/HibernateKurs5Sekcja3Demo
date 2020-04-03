@@ -31,10 +31,7 @@ public class Application_CreateData {
 			user.setFirstName("Kevin");
 			user.setLastName("Ahyttt");
 			user.setBirthDate(new Date());
-			
 			user.setEmailAddress("kmb385@yahoo.com");
-			user.setFirstName("Kevin");
-			user.setLastName("Bowersox");
 			user.setLastUpdatedBy("kevin");
 			user.setLastUpdatedDate(new Date());
 			
