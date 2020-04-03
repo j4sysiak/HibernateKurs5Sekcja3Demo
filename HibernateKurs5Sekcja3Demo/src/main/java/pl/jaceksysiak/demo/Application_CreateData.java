@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 import pl.jaceksysiak.demo.entity.User;
 
 
-public class Application {
+public class Application_CreateData {
 
 	public static void main(String[] args) {
 

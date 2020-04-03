@@ -3,6 +3,8 @@ package pl.jaceksysiak.demo.entity;
 
 import java.util.Date;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +15,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="FINANCES_USER")
+@Access(value = AccessType.FIELD)
 public class User {
 
 	@Id
@@ -38,10 +41,10 @@ public class User {
 	@Column(name="LAST_UPDATED_BY")
 	private String lastUpdatedBy;
 
-	@Column(name="CREATED_DATE")
+	@Column(name="CREATED_DATE", updatable = false)
 	private Date createdDate;
 
-	@Column(name="CREATED_BY")
+	@Column(name="CREATED_BY", updatable = false)
 	private String createdBy;
 	
 	
@@ -201,4 +204,19 @@ public class User {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", birthDate="
+				+ birthDate + ", emailAddress=" + emailAddress + ", lastUpdatedDate=" + lastUpdatedDate
+				+ ", lastUpdatedBy=" + lastUpdatedBy + ", createdDate=" + createdDate + ", createdBy=" + createdBy
+				+ "]";
+	}
+	
+	
+	
 }
