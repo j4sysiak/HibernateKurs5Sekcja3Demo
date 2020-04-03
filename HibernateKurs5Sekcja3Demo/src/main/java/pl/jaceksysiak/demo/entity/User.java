@@ -1,4 +1,5 @@
 package pl.jaceksysiak.demo.entity;
+        
 
 import java.util.Date;
 
@@ -8,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name="FINANCES_USER")
@@ -20,13 +22,13 @@ public class User {
 
 	@Column(name="FIRST_NAME")
 	private String firstName;
-
+	
 	@Column(name="LAST_NAME")
 	private String lastName;
 
 	@Column(name="BIRTH_DATE")
 	private Date birthDate;
-
+	
 	@Column(name="EMAIL_ADDRESS")
 	private String emailAddress;
 
@@ -41,22 +43,132 @@ public class User {
 
 	@Column(name="CREATED_BY")
 	private String createdBy;
+	
+	
+	public User() {}
+	
 
-	public Long getUserId() {
-		return userId;
-	}
 
-	public void setUserId(Long userId) {
+
+
+	public User(Long userId, String firstName, String lastName, Date birthDate, String emailAddress,
+			Date lastUpdatedDate, String lastUpdatedBy, Date createdDate, String createdBy) {
 		this.userId = userId;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
 		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthDate = birthDate;
+		this.emailAddress = emailAddress;
+		this.lastUpdatedDate = lastUpdatedDate;
+		this.lastUpdatedBy = lastUpdatedBy;
+		this.createdDate = createdDate;
+		this.createdBy = createdBy;
 	}
+
+
+
+
+
+
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+
+
+
+
+
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+
+
+
+
+
+
+	public Date getLastUpdatedDate() {
+		return lastUpdatedDate;
+	}
+
+
+
+
+
+
+
+	public void setLastUpdatedDate(Date lastUpdatedDate) {
+		this.lastUpdatedDate = lastUpdatedDate;
+	}
+
+
+
+
+
+
+
+	public String getLastUpdatedBy() {
+		return lastUpdatedBy;
+	}
+
+
+
+
+
+
+
+	public void setLastUpdatedBy(String lastUpdatedBy) {
+		this.lastUpdatedBy = lastUpdatedBy;
+	}
+
+
+
+
+
+
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+
+
+
+
+
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+
+
+
+
+
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+
+
+
+
+
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+
+
+
+
+
 
 	public String getLastName() {
 		return lastName;
@@ -74,44 +186,19 @@ public class User {
 		this.birthDate = birthDate;
 	}
 
-	public String getEmailAddress() {
-		return emailAddress;
+	public Long getUserId() {
+		return userId;
 	}
 
-	public void setEmailAddress(String emailAddress) {
-		this.emailAddress = emailAddress;
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
-	public Date getLastUpdatedDate() {
-		return lastUpdatedDate;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setLastUpdatedDate(Date lastUpdatedDate) {
-		this.lastUpdatedDate = lastUpdatedDate;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-
-	public String getLastUpdatedBy() {
-		return lastUpdatedBy;
-	}
-
-	public void setLastUpdatedBy(String lastUpdatedBy) {
-		this.lastUpdatedBy = lastUpdatedBy;
-	}
-
-	public Date getCreatedDate() {
-		return createdDate;
-	}
-
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
-	}
-
-	public String getCreatedBy() {
-		return createdBy;
-	}
-
-	public void setCreatedBy(String createdBy) {
-		this.createdBy = createdBy;
-	}
-
 }
