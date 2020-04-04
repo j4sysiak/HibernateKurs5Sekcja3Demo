@@ -11,7 +11,7 @@
 
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
 		<!-- Assume test is the database name -->
-		<property name="hibernate.connection.url">jdbc:mysql://localhost/ifinances?useSSL=false&amp;serverTimezone=UTC</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/ifinances__HibernateKurs5_Sekcja4_Demo?useSSL=false&amp;serverTimezone=UTC</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password">Warszawa5584</property>
 
